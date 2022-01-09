@@ -1,0 +1,27 @@
+.header {
+    padding: 1rem 4rem;
+    background-color: var(--color-black);
+    
+    .header__logo {
+        width: 150px;
+    }
+}
+
+.header__nav {
+    display: flex;
+    list-style: none;
+
+    .nav__item {
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+    }
+
+    .nav__link {
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+    }
+}
+
