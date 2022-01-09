@@ -16,13 +16,20 @@
         &:not(:last-child) {
             margin-right: 1.5rem;
         }
+
+        &:last-child {
+            padding-left: 2rem;
+            border-left: 1px solid var(--color-white);
+        }
     }
 
     .nav__link {
         color: #fff;
         font-size: 1rem;
         font-weight: 600;
+        letter-spacing: .4px;
         text-decoration: none;
+        text-transform: uppercase;
     }
 }
 

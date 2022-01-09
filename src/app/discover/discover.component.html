@@ -1,1 +1,19 @@
-<p>discover works!</p>
+<div class="block block--discover">
+    <div class="wrapper column">
+        <div class="block__header">
+            <h1 class="header__title">Favorite Music Tracker</h1>
+            <p class="header__subtitle">Descubra a música que mais aparece em suas playlists.</p>
+        </div>
+        <form class="block__form">
+            <input class="form__input" class="form__input" type="text" name="search" placeholder="Seu ID do spotify..."/>
+            <div class="block__actions">
+                <a href="http://localhost:8888/login" class="button button--primary">Logar no Spotify</a>
+                <button class="button button--secondary">Descobrir</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="block block--results">
+    <app-search-result></app-search-result>
+</div>

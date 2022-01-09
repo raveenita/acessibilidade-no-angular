@@ -1,0 +1,28 @@
+<div class="block block--instructions">
+    <div class="wrapper column">
+        <div class="block__header">
+            <h1 class="header__title">Logue com o spotify e clique em <mark>Descobrir</mark>.</h1>
+        </div>
+    </div>
+</div>
+
+<div class="block block--results">
+    <div class="resulted__songs">
+        <div class="song--featured">
+            <div class="wrapper column">
+                <div class="block_header">
+                    <h2 class="header__title">A música que mais aparece em suas <em>playlists</em> é...</h2>
+                </div>
+                <app-spotlight [spotlightedSong]="mostPlayedSong"></app-spotlight>
+            </div>
+        </div>
+
+    <div class="songs--casual">
+        <div class="wrapper column">
+            <div class="block__header">
+                <h2 class="header__title">Músicas que também aparecem nas suas <em>playlists</em>...</h2>
+            </div>
+            <app-songs></app-songs>
+        </div>
+    </div>
+</div>

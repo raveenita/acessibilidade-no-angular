@@ -1,0 +1,51 @@
+.block--discover {
+    padding: {
+        top: 8.5rem;
+        bottom: 8.5rem;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #2941ab;
+
+    .block__header {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: var(--color-white);
+    
+        .header__title {
+            font-size: 4.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-white);
+        }
+    
+        .header__subtitle {
+            font-size: 1.5em;
+        }
+    }
+
+    .block__form {
+        &::-webkit-input-placeholder { 
+            font-size: 1em;
+        }
+
+        .form__input {
+            border: 0;
+            width: 100%;
+            padding: 1rem;
+            border-radius: var(--default-border-radius);
+            font-size: 1.2em;
+        }
+
+        .form__actions {
+            display: flex;
+            margin-top: 2em;
+        }
+
+        .button--primary {
+            flex: 1;
+            margin-left: 1em;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.block--instructions {
+    padding: {
+        top: 8rem;
+        bottom: 8rem;
+    }
+    text-align: center;
+    background-color: #eee;
+
+    .block__header {
+        .header__title {
+            font-size: 3rem;
+
+            mark {
+                border-radius: 4px;
+                padding: 0.2rem 0.8rem;
+                color: var(--color-white);
+                background-color: #4265ff;
+            }
+        }
+    }
+}
+
+.block--results {
+    .block_header {
+        text-align: center;
+
+        .header__title {
+            font-size: 3rem;
+        }
+    }
+
+    .resulted__songs {
+        width: 100%;
+    }
+
+    .song--featured {
+        background-color: #59ffe0;
+        padding: 8rem 0;
+    }
+
+    .songs--casual {
+        margin: 7rem 0;
+
+        .block__header {
+            margin-bottom: 5rem;
+        }
+    }
+}

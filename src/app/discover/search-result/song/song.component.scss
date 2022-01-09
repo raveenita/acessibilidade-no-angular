@@ -1,0 +1,37 @@
+.song {
+    flex: 47% 0 0;
+    display: flex;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    background-color: white;
+    box-shadow: 0 0 20px #eee;
+
+    &__details {
+        flex: 1;
+        padding: 1em;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: 1em;
+        font-weight: bold;
+        margin-bottom: .5em;
+    }
+
+    &__author {
+        font-size: .8em;
+        font-weight: 600;
+    }
+
+    &__repetitions {
+        color: white;
+        display: block;
+        padding: .6em;
+        font-weight: 600;
+        background-color: red;
+    }
+
+}
