@@ -10,6 +10,7 @@
 .header__nav {
     display: flex;
     list-style: none;
+    align-items: center;
 
     .nav__item {
         &:not(:last-child) {

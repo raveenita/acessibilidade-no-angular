@@ -1,0 +1,64 @@
+.home--main {
+    padding-top: 2rem;
+    min-height: calc(100vh - 80px);
+    background-color: #716ae3;
+
+    .block__image {
+        margin-left: 3rem;
+
+        img {
+            max-width: 580px;
+        }
+    }
+
+    .block__header {
+        .header__title {
+            font-size: 4rem;
+            color: #9f99ff;
+        }
+    }
+
+    .block__actions {
+        margin-top: 2rem;
+
+        .button {
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+        }
+    }
+}
+
+.home--video {
+    background-color: #ffc366;
+    padding: {
+        top: 5rem;
+        bottom: 5rem;
+    }
+
+    .block__header {
+        margin-bottom: 3rem;
+        color: #da9824;
+        text-align: right;
+
+        .header__title {
+            line-height: 1;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .header__subtitle {
+            font-size: 1.5rem;
+        }
+    }
+
+    .video__player {
+        max-width: 666px;
+        margin-right: 3rem;
+        border-radius: 4px;
+    }
+
+    .block__actions {
+        text-align: right;
+    }
+}
