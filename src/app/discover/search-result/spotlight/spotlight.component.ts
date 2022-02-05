@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Song } from 'src/app/models/songs.interface';
+import { Track } from 'src/app/models/track.interface';
 
 @Component({
   selector: 'app-spotlight',
@@ -7,7 +7,7 @@ import { Song } from 'src/app/models/songs.interface';
   styleUrls: ['./spotlight.component.scss']
 })
 export class SpotlightComponent implements OnInit {
-  @Input() spotlightedSong: Song | undefined; 
+  @Input() spotlightedTrack: Track | undefined; 
 
   constructor() { }
 

@@ -1,27 +1,40 @@
 .block--home {
     .home__main {
+        overflow: hidden;
+        position: relative;
         padding-top: 2rem;
         min-height: calc(100vh - 80px);
-        background-color: #716ae3;
+        background-color: #f6c266;
+
+        &:before {
+            top: -65px;
+            left: -65px;
+            content: "";
+            width: 400px;
+            height: 400px;
+            border-radius: 100%;
+            position: absolute;
+            background-color: #283b97;
+        }
     
         .block__image {
             margin-left: 3rem;
     
             img {
-                max-width: 580px;
+                max-width: 595px;
             }
         }
     
         .block__header {
             .header__title {
                 font-size: 4rem;
-                color: #9f99ff;
+                color: #283b97;
             }
         }   
     }
     
     .home__video {
-        background-color: #ffc366;
+        background-color: #586bef;
         padding: {
             top: 5rem;
             bottom: 5rem;
@@ -29,7 +42,7 @@
     
         .block__header {
             margin-bottom: 3rem;
-            color: #da9824;
+            color: #ffd740;
             text-align: right;
     
             .header__title {
@@ -39,18 +52,23 @@
             }
     
             .header__subtitle {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
             }
         }
     
         .video__player {
-            max-width: 666px;
+            max-width: 750px;
             margin-right: 3rem;
             border-radius: 4px;
         }
     
         .block__actions {
             text-align: right;
+
+            .button {
+                color: #ffd740;
+                border-color: #ffd740;
+            }
         }
     }
 }

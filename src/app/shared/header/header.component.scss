@@ -29,7 +29,10 @@
         font-weight: 600;
         letter-spacing: .4px;
         text-decoration: none;
-        text-transform: uppercase;
+
+        &:hover {
+            color: var(--color-link);
+        }
     }
 }
 

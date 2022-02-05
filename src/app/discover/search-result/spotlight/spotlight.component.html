@@ -2,15 +2,15 @@
     <article class="song">
         <div class="song__details">
             <div class="song__cover">
-                <img src="http://placekitten.com/300/300" alt="" title=""/>
+                <img [src]="spotlightedTrack!.album.images[0].url" [alt]="spotlightedTrack!.name"/>
             </div>
-            <p class="song__repetitions">Aparece em <strong>2 playlists</strong></p>
-            <h3 class="song__title">a tu lado</h3>
-            <p class="song__artist">RBD</p>
+            <p class="song__repetitions">Aparece em <mark class="most__repetitions">{{ spotlightedTrack!.repetitions }}</mark>playlists</p>
+            <h3 class="song__title">{{ spotlightedTrack!.name }}</h3>
+            <p class="song__artist">{{ spotlightedTrack!.artists[0].name }}</p>
         </div>
 
         <div class="song__actions">
-            <a target="_blank" href="" class="button button--primary">Escutar no Spotify</a>
+            <a target="_blank" [href]="spotlightedTrack!.href" class="button button--primary">Escutar no Spotify</a>
         </div>
     </article>
 </div>

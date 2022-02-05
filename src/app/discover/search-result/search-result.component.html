@@ -8,21 +8,21 @@
 
 <div class="block block--results">
     <div class="resulted__songs">
-        <div class="song--featured">
+        <div class="results__spotlighted">
             <div class="wrapper column">
-                <div class="block_header">
-                    <h2 class="header__title">A música que mais aparece em suas <em>playlists</em> é...</h2>
+                <div class="block__header">
+                    <h2 class="header__title">A música que mais aparece em suas <mark>playlists</mark> é...</h2>
                 </div>
-                <app-spotlight [spotlightedSong]="mostPlayedSong"></app-spotlight>
+                <app-spotlight [spotlightedTrack]="tracks!.spotlights[0]"></app-spotlight>
             </div>
         </div>
 
-    <div class="songs--casual">
+    <!-- <div class="results__familiar">
         <div class="wrapper column">
             <div class="block__header">
                 <h2 class="header__title">Músicas que também aparecem nas suas <em>playlists</em>...</h2>
             </div>
-            <app-songs></app-songs>
+            <app-songs [tracks]="tracks!.familiar"></app-songs>
         </div>
-    </div>
+    </div> -->
 </div>

@@ -21,11 +21,12 @@
 }
 
 .block--results {
-    .block_header {
+    .block__header {
         text-align: center;
+        margin-bottom: 3rem;
 
         .header__title {
-            font-size: 3rem;
+            font-size: 3.5rem;
         }
     }
 
@@ -33,12 +34,17 @@
         width: 100%;
     }
 
-    .song--featured {
-        background-color: #59ffe0;
+    .results__spotlighted {
+        background-color: #ffcdd2;
+        
         padding: 8rem 0;
+
+        .block__header {
+            color: #d83519;
+        }
     }
 
-    .songs--casual {
+    .results__familiar {
         margin: 7rem 0;
 
         .block__header {

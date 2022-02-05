@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Song } from 'src/app/models/songs.interface';
+import { Track } from 'src/app/models/track.interface';
 
 @Component({
   selector: 'app-song',
@@ -7,16 +7,11 @@ import { Song } from 'src/app/models/songs.interface';
   styleUrls: ['./song.component.scss']
 })
 export class SongComponent implements OnInit {
-  @Input() song: Song = {
-    title: 'el mundo detras',
-    repetitions: 0,
-    coverImage: '',
-    artist: 'dulce maria'
-  }
+  @Input() track: Track | undefined;
+
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.song);
   }
 
 }

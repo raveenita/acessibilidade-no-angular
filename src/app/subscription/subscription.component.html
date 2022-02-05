@@ -1,1 +1,37 @@
-<p>subscription works!</p>
+<section class="block block--subscription">
+   <div class="wrapper column">
+       <header class="block__header">
+           <h2 class="header__title">Inscreva-se grátis e comece a curtir.</h2>
+       </header>
+        <form class="form--subscription" [formGroup]="subscriptionForm" (onSubmit)="registerNewUser()">
+            <div class="form__group">
+                <label class="input__label">E-mail</label >
+                <input type="text" name="email" class="form__input" formControlName="email">
+            </div>
+            <div class="form__group">
+                <label class="input__label">Senha</label >
+                <input type="password" name="secretKeyword" class="form__input" formControlName="secretKeyword">
+            </div>
+            <div class="form__group">
+                <label class="input__label">Nome</label >
+                <input type="password" name="name" class="form__input" formControlName="name">
+            </div>
+            <div class="form__group">
+                <label class="input__label">Data de nascimento</label >
+            </div>
+            <div class="form__group">
+                <label class="input__label">Gênero</label>
+
+                <mat-radio-group class="example-radio-group" [(ngModel)]="selectedGender">
+                <mat-radio-button class="example-radio-button" *ngFor="let gender of genders" [value]="gender">
+                    {{ gender }}
+                </mat-radio-button>
+                </mat-radio-group>
+            </div>
+
+            <div class="form__actions">
+                <button class="button button--primary">Saiba mais</button>
+            </div>
+        </form>
+   </div>
+</section>

@@ -4,16 +4,17 @@
             <h1 class="header__title">Favorite Music Tracker</h1>
             <p class="header__subtitle">Descubra a música que mais aparece em suas playlists.</p>
         </div>
-        <form class="block__form">
-            <input class="form__input" class="form__input" type="text" name="search" placeholder="Seu ID do spotify..."/>
+        <div class="block__form">
+            <input class="form__input" class="form__input" [(ngModel)]="accountId"
+            type="text" name="search" placeholder="Seu ID do spotify..."/>
             <div class="block__actions">
-                <a href="http://localhost:8888/login" class="button button--primary">Logar no Spotify</a>
-                <button class="button button--secondary">Descobrir</button>
+                <a href="http://localhost:8888/" class="button button--primary">Logar no Spotify</a>
+                <button class="button button--secondary" (click)="getFavoriteTracksFromUserPlaylists()">Descobrir</button>
             </div>
-        </form>
+        </div>
     </div>
 </div>
 
-<div class="block block--results">
-    <app-search-result></app-search-result>
+<div class="block block--results" *ngIf="classifiedTracks !== undefined">
+    <app-search-result [tracks]="classifiedTracks"></app-search-result>
 </div>

@@ -3,7 +3,9 @@ import { CommonModule } from '@angular/common';
 import { SubscriptionComponent } from './subscription.component';
 import { SharedModule } from '../shared/shared.module';
 import { SubscriptionRoutingModule } from './subscription-routing.module';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatRadioModule } from '@angular/material/radio';
 
 
 @NgModule({
@@ -13,7 +15,10 @@ import { SubscriptionRoutingModule } from './subscription-routing.module';
   imports: [
     CommonModule,
     SharedModule,
-    SubscriptionRoutingModule
+    SubscriptionRoutingModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatRadioModule
   ]
 })
 export class SubscriptionModule { }

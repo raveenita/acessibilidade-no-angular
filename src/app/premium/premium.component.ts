@@ -6,6 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./premium.component.scss']
 })
 export class PremiumComponent implements OnInit {
+  public plans = [
+    {
+      name: 'Plano básico',
+      monthlyPayment: '14.90',
+      advantages: ['more pizza', 'whatever',]
+    }
+  ];
 
   constructor() { }
 

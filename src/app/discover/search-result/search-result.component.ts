@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Song } from 'src/app/models/songs.interface';
+import { Component, Input, OnInit } from '@angular/core';
+import { ClassifiedTracks } from 'src/app/models/classified-tracks.interface';
+import { Track } from 'src/app/models/track.interface';
 
 @Component({
   selector: 'app-search-result',
@@ -7,12 +8,8 @@ import { Song } from 'src/app/models/songs.interface';
   styleUrls: ['./search-result.component.scss']
 })
 export class SearchResultComponent implements OnInit {
-  public mostPlayedSong: Song = {
-    title: 'Lean On',
-    artist: 'Mo',
-    repetitions: 147,
-    coverImage: 'i dont have it'
-  }
+  @Input() tracks: ClassifiedTracks | undefined;
+
   constructor() { }
 
   ngOnInit(): void {

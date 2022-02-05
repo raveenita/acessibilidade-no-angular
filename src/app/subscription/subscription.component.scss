@@ -1,0 +1,38 @@
+.block--subscription {
+    padding: {
+        top: 4rem;
+        bottom: 4rem;
+    };
+
+    .block__header {
+        margin-bottom: 2rem;
+    }
+
+    .form--subscription {
+        margin: 0 auto;
+        display: block;
+        min-width: 450px;
+    
+        .input__label {
+            display: block;
+            margin-bottom: 0.65rem;
+        }
+    
+        .form__input {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 4px;
+            border: 1px solid #000;
+        }
+    
+        .form__group { 
+            margin-bottom: 1rem;
+        }
+
+        .form__actions {
+            margin-top: 2rem;
+            text-align: center;
+        }
+    }
+}
+
