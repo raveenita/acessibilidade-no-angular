@@ -1,0 +1,24 @@
+mat-radio-button {
+    &.mat-accent {
+
+        &:active {
+            .mat-radio-persistent-ripple {
+                background-color: var(--color-green) !important;
+            }
+        }
+ 
+        &.mat-radio-checked {
+            .mat-radio-persistent-ripple {
+                background-color: var(--color-green) !important;
+            }
+
+            .mat-radio-inner-circle {
+                background-color: var(--color-green) !important;
+            }
+
+            .mat-radio-outer-circle {
+                border-color: var(--color-green) !important;
+            }
+        }
+    }
+}

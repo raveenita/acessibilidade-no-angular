@@ -1,0 +1,36 @@
+.button {
+    line-height: 1;
+    color: var(--color-white);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: Signika;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all .3s;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: var(--button-border-radius);
+
+    &.button {
+        &--primary {
+            background-color: #3e7f2a; // var(--color-medium-green);
+
+            &:hover {
+                color: var(--color-white) !important;
+                background-color: #409028;
+            }
+        }
+
+        &--secondary {
+            border-color: var(--color-white);
+        }
+
+        &--tertiary {
+            
+        }
+    }
+}

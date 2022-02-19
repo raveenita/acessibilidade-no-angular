@@ -1,0 +1,26 @@
+html {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Signika, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: space-between;
+
+    &.column {
+        flex-direction: column;
+
+    }
+}
+
+.animate {
+    .block--main {
+        &:before {
+            animation: circleHome 2s alternate infinite;
+        }
+    }
+}
