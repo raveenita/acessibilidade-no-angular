@@ -51,3 +51,25 @@
         }
     }
 }
+
+.block--instructions {
+    padding: {
+        top: 8rem;
+        bottom: 8rem;
+    }
+    text-align: center;
+    background-color: var(--color-white);
+
+    .block__header {
+        .header__title {
+            font-size: 3rem;
+
+            mark {
+                border-radius: 4px;
+                padding: 0.2rem 0.8rem;
+                color: var(--color-white);
+                background-color: var(--color-black);
+            }
+        }
+    }
+}

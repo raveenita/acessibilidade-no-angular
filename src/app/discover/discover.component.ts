@@ -1,6 +1,5 @@
 import { Component, OnInit, PLATFORM_ID } from '@angular/core';
 import { Observable, of, pipe, map, mergeMap, forkJoin, observable } from 'rxjs';
-import { Response } from '../models/api-response.interface';
 import { ClassifiedTracks } from '../models/classified-tracks.interface';
 import { Playlist } from '../models/playlist.interface';
 import { Track } from '../models/track.interface';
@@ -12,11 +11,11 @@ import { PlaylistsService } from './services/playlists.service';
   styleUrls: ['./discover.component.scss']
 })
 export class DiscoverComponent implements OnInit {
-  public highestNumberOfRepetitions: number = 0;
+  public highestRepetitions: number = 0;
   public classifiedTracks: ClassifiedTracks | undefined;
   public tracks: Array<Track> = [];
   public accountId: string = '22tk6jgofco56wm3rk3ctx6lq';
-  public showFavoriteTrack: boolean = false;
+  public repetitions = {}
 
   constructor(
     private readonly playlistsService: PlaylistsService
@@ -46,44 +45,44 @@ export class DiscoverComponent implements OnInit {
     });
 
     forkJoin($playlists).subscribe(
-      (playlist) => {
-        Object.entries(playlist).forEach(([key, value]) => {
-          console.log(key, value);
-          // const track: Track = value.track;
-  
-          // this.handleTrack(track);
+      (playlists) => {
+        Object.entries(playlists).forEach(([indexPlaylist, currentPlaylist]) => {
+          Object.entries(currentPlaylist).forEach(([indexTrack, currentTrack]) => {
+            this.tracks.push(currentTrack.track);
+          });
         });
+
+        this.tracks = this.trackRepetitions();
+        this.classifiedTracks = this.classifyTracks();
       }
-  );
+    );
   }
 
   private resetSavedTracks() { 
     this.classifiedTracks = undefined;
-    this.highestNumberOfRepetitions = 0;
+    this.highestRepetitions = 0;
+    this.classifiedTracks = undefined
   }
 
-  private handleTrack(currentTrack: Track): void {
-    this.tracks.push(currentTrack);
-    this.setTrackRepetitions(currentTrack);
-  };
-
-  private setTrackRepetitions(currentTrack: Track): void {
-    const handledTracks = this.tracks.map((track: Track) => {
-
-      if (track.id === currentTrack.id) {
-        track.repetitions = (track.repetitions || 0) + 1;
-        this.highestNumberOfRepetitions = (track.repetitions >= this.highestNumberOfRepetitions) ? track.repetitions : this.highestNumberOfRepetitions;
+  private trackRepetitions(): Array<Track> {
+    const INITIAL_REPETITIONS_NUMBER = 0;
+    
+    const handledTracks = [...this.tracks.reduce( (trackMap, track) => {
+      if (!trackMap.has(track.id)) {
+        trackMap.set(track.id, { ...track, repetitions: INITIAL_REPETITIONS_NUMBER });
       }
+      trackMap.get(track.id).repetitions++;
+      this.highestRepetitions = this.highestRepetitions < trackMap.get(track.id).repetitions ? trackMap.get(track.id).repetitions : this.highestRepetitions;
+      
+      return trackMap;
+    }, new Map).values()];
 
-      return track;
-    });
-
-    this.tracks = handledTracks;
+    return handledTracks;
   }
 
   private getMostRepeatedTracks(): Array<Track> {
     const favoriteTracks = this.tracks.filter((track) => {
-      return track.repetitions === this.highestNumberOfRepetitions;
+      return track.repetitions === this.highestRepetitions;
     });
 
     return favoriteTracks;
@@ -94,7 +93,7 @@ export class DiscoverComponent implements OnInit {
 
     return {  
       favoriteTrack: favoritesTracks[0],
-      spotlights: favoritesTracks.slice(1),
+      spotlights: favoritesTracks.slice(-1),
       familiar: []
     };
   }

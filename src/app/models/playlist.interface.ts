@@ -14,6 +14,7 @@ export interface Playlist {
     public: boolean;
     snapshot_id: string;
     tracks: Track;
+    track?: Track;
     type: string;
     url: string;
     items: Array<Track>;

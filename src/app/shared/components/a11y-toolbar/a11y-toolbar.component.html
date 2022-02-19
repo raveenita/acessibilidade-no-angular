@@ -3,9 +3,8 @@
         <h2>Ferramentas de acessibilidade</h2>
     </header>
     <div class="wrapper">
-        <a class="toolbar__link link--content" href="#mainContent">
-            <mat-icon>accessible</mat-icon>
-            <span>Ir para conteúdo</span>
+        <a class="toolbar__link link--content" [href]="skipLinkPath">
+            <span>Pular para conteúdo</span>
         </a>
         <a tabindex="0" class="toolbar__link" (click)="decreaseFontSize()"><mat-icon>text_decrease</mat-icon>
             <span class="screen-reader--only">Diminuir fonte</span>

@@ -9,7 +9,7 @@
         border: none;
 
         &:hover {
-            color: #1a8e43;
+            color: var(--color-link);
         }
 
         &:not(:last-child) {

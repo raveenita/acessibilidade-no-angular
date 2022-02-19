@@ -8,10 +8,10 @@ import { Track } from 'src/app/models/track.interface';
 })
 export class SpotlightComponent implements OnInit {
   @Input() spotlightedTrack: Track | undefined; 
-
   constructor() { }
 
   ngOnInit(): void {
+  console.log(this.spotlightedTrack);
   }
 
 }

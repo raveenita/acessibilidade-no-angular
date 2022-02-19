@@ -45,7 +45,7 @@
         &__repetitions {
             top: 25px;
             left: -15px;
-            color: white;
+            color: var(--color-white);
             padding: 0.4em 1.5rem;
             font-size: 1.2em;
             letter-spacing: 1px;
@@ -61,15 +61,20 @@
         &__cover {
             img {
                 border-radius: 4px;
-                box-shadow: 0 0 20px #eee;
+                box-shadow: 0 0 20px var(--color-white);
                 max-width: 100%;
             }
         }
 
         .most__repetitions {
-            padding: 1rem;
-            background: red;
-            border-radius: 60px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+            color: var(--color-orange);
+            background-color: var(--color-blue);
+            border-radius: var(--button-border-radius);
             display: inline-block;
         }
         

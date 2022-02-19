@@ -1,4 +1,5 @@
 <header class="block__header">
+    <img width="200" src="assets/images/spotify.svg" alt="Logo do spotify">
     <h2 mat-dialog-title class="header__title">
       Obrigada por se juntar a nós,
       <strong>{{ newUser.name }}!</strong>
@@ -11,5 +12,5 @@
 </div>
 
 <div mat-dialog-actions>
-  <button class="button button--primary">Já recebi o e-mail!</button>
+  <button class="button button--primary" (click)="closeModal()">Já recebi o e-mail!</button>
 </div>

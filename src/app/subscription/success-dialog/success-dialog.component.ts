@@ -1,3 +1,4 @@
+import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
@@ -19,11 +20,14 @@ export class SuccessDialogComponent implements OnInit {
   constructor(
     public dialogRef: MatDialogRef<SuccessDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public newUser: User,
+    private liveAnnouncer: LiveAnnouncer
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.liveAnnouncer.announce('Cadastro realizado com sucesso!');
+  }
 
-  onNoClick(): void {
+  closeModal(): void {
     this.dialogRef.close();
   }
 

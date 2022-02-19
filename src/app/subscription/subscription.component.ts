@@ -1,3 +1,4 @@
+import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
@@ -23,6 +24,12 @@ export class SubscriptionComponent implements OnInit {
     return this.subscriptionForm.controls;
   }
 
+  constructor(
+    private formBuilder: FormBuilder,
+    private dialog: MatDialog,
+    private liveAnnouncer: LiveAnnouncer
+  ) { }
+
   public subscriptionForm: FormGroup = this.formBuilder.group({
     name: ['', Validators.required],
     email: ['', Validators.required],
@@ -31,10 +38,7 @@ export class SubscriptionComponent implements OnInit {
     interest: ['', Validators.required],
   });
 
-  constructor(
-    private formBuilder: FormBuilder,
-    private dialog: MatDialog
-  ) { }
+  
 
   public ngOnInit(): void {
   }
@@ -58,7 +62,9 @@ export class SubscriptionComponent implements OnInit {
       },
     });
 
-    dialogRef.afterClosed().subscribe();
+    dialogRef.afterClosed().subscribe(() => {
+      this.liveAnnouncer.announce('Modal fechada.');
+    });
   }
  
 }
