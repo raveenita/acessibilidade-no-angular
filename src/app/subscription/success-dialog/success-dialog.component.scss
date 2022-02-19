@@ -1,0 +1,26 @@
+.block__header {
+    text-align: center;
+
+    .header__title {
+        strong {
+            display: block;
+        }
+    }
+}
+
+.mat-dialog-content {
+    text-align: center;
+    
+    p {
+        font-size: 1.1rem;
+        line-height: 28px;
+    }
+}
+
+.mat-dialog-actions {
+    justify-content: center;
+    margin: {
+        top: 1rem;
+        bottom: 0;
+    }
+}

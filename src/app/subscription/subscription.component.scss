@@ -1,13 +1,9 @@
 .block--subscription {
     padding: {
-        top: 4rem;
+        top: 3rem;
         bottom: 4rem;
     };
-
-    .block__header {
-        margin-bottom: 2rem;
-    }
-
+    
     .form--subscription {
         margin: 0 auto;
         display: block;
@@ -17,12 +13,28 @@
             display: block;
             margin-bottom: 0.65rem;
         }
+
+        .mat-error,
+        .mat-hint {
+            margin-top: 10px;
+        }
+
+        .mat-hint {
+            display: inline-block;
+        }
     
         .form__input {
             width: 100%;
             padding: 1rem;
+            font-size: 1rem;
             border-radius: 4px;
-            border: 1px solid #000;
+            border: 1px solid var(--color-black);
+
+            &.ng-touched {
+                &.ng-invalid {
+                    border-color: var(--color-red);
+                }
+            }
         }
     
         .form__group { 
@@ -33,6 +45,22 @@
             margin-top: 2rem;
             text-align: center;
         }
+
+        .group__select {
+            width: 100%;
+            display: block;
+        }
+
+        .genders__options {
+            .option__gender {
+                margin-right: 1rem;
+            }
+        }
     }
 }
 
+:host {
+    mat-form-field {
+        width: 100%;
+    }
+}

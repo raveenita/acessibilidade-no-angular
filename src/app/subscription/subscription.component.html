@@ -1,37 +1,56 @@
 <section class="block block--subscription">
+    <header class="block__header">
+        <h2 class="header__title">Inscreva-se grátis e comece a curtir.</h2>
+        <p class="header__subtitle">O primeiro mês é por nossa conta. =)</p>
+    </header>
+    
    <div class="wrapper column">
-       <header class="block__header">
-           <h2 class="header__title">Inscreva-se grátis e comece a curtir.</h2>
-       </header>
-        <form class="form--subscription" [formGroup]="subscriptionForm" (onSubmit)="registerNewUser()">
+        <form class="form--subscription" [formGroup]="subscriptionForm" (ngSubmit)="registerNewUser()">
             <div class="form__group">
-                <label class="input__label">E-mail</label >
-                <input type="text" name="email" class="form__input" formControlName="email">
+                <label class="input__label" for="name">Nome</label>
+                <input type="text" placeholder="Digite seu nome..." id="name" 
+                class="form__input" formControlName="name" aria-describedby="error-name">
+                <mat-error id="error-name" *ngIf="form['name'].touched && form['name']?.errors">O campo é obrigatório</mat-error>
             </div>
             <div class="form__group">
-                <label class="input__label">Senha</label >
-                <input type="password" name="secretKeyword" class="form__input" formControlName="secretKeyword">
+                <label class="input__label" for="email">E-mail</label>
+                <input type="email" placeholder="Informe seu e-mail..."
+                name="email" id="email" class="form__input" formControlName="email">
+                <mat-hint>Informe um e-mail no formato usuario@dominio.com.br</mat-hint>
+                <mat-error *ngIf="form['email'].touched && form['email']?.errors">O campo é obrigatório</mat-error>
             </div>
             <div class="form__group">
-                <label class="input__label">Nome</label >
-                <input type="password" name="name" class="form__input" formControlName="name">
+                <label class="input__label" for="secretKeyword">Senha</label>
+                <input type="password" placeholder="Digite uma senha..." 
+                name="secretKeyword"  id="secretKeyword" class="form__input" formControlName="secretKeyword">
+                <mat-error *ngIf="form['secretKeyword'].touched && form['secretKeyword']?.errors">O campo é obrigatório</mat-error>
             </div>
             <div class="form__group">
-                <label class="input__label">Data de nascimento</label >
-            </div>
-            <div class="form__group">
-                <label class="input__label">Gênero</label>
+                <label class="input__label">Interesses</label>
+                
+                <mat-form-field appearance="fill" class="group__select">
+                    <mat-label id="interest-description">Qual seu principal interesse no spotify?</mat-label>
+                    <mat-select aria-label="interest-label" aria-labelledby="interest-description" formControlName="interest">
+                        <mat-option>Nenhum</mat-option>
+                        <mat-option *ngFor="let interest of interests" [value]="interest">{{ interest }}</mat-option>
+                    </mat-select>
+                </mat-form-field>
 
-                <mat-radio-group class="example-radio-group" [(ngModel)]="selectedGender">
-                <mat-radio-button class="example-radio-button" *ngFor="let gender of genders" [value]="gender">
-                    {{ gender }}
-                </mat-radio-button>
+                <mat-error *ngIf="form['interest']?.touched && form['interest']?.errors">O campo é obrigatório</mat-error>
+            </div>
+            <div class="form__group">
+                    <mat-radio-group class="genders__options" formControlName="gender">
+                    <mat-radio-button class="option__gender" *ngFor="let gender of genders" [value]="gender">
+                        {{ gender }}
+                    </mat-radio-button>
                 </mat-radio-group>
+
+                <mat-error *ngIf="form['gender']?.touched && form['gender']?.errors">O campo é obrigatório</mat-error>
             </div>
 
-            <div class="form__actions">
-                <button class="button button--primary">Saiba mais</button>
-            </div>
+            <footer class="form__actions">
+                <button class="button button--primary" type="submit">Cadastrar</button>
+            </footer>
         </form>
    </div>
 </section>
