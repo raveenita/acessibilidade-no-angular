@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FaqComponent } from './faq.component';
 import { SharedModule } from '../shared/shared.module';
 import { FaqRoutingModule } from './faq-routing.module';
-import { MatExpansionModule } from '@angular/material/expansion';
+import { CdkAccordionModule } from '@angular/cdk/accordion';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     CommonModule,
     SharedModule,
     FaqRoutingModule,
-    MatExpansionModule
+    CdkAccordionModule
   ]
 })
 export class FaqModule { }

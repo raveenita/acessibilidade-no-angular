@@ -1,29 +1,70 @@
-<div class="block--faq">
+<div class="block block--faq">
     <div class="wrapper column">
-        <div class="block__header">
-            <h1 class="header__title">Perguntas frequentes</h1>
-            <p class="header__subtitle">Com o spotify isso não é mais um problema.</p>
-        </div>
-        
+        <header class="block__header">
+          <h2 class="header__title">Perguntas frequentes</h2>
+          <p class="header__subtitle">Tudo o que você precisa saber pra fazer parte desta família</p>
+      </header>
+
         <div class="block__questions">
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    Preciso pagar o primeiro mês?
-                  </mat-panel-title>
-                </mat-expansion-panel-header>
-                Não! O primeiro mês é totalmente gratuito.
-            </mat-expansion-panel>
-
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    Já utilizei meu primeiro mês gratuito. E agora?
-                  </mat-panel-title>
-                </mat-expansion-panel-header>
-                Agora você pode optar por continuar com a assinatura por apenas R$ 59,90 ou manter a versão gratuita.
-
-            </mat-expansion-panel>
+            <cdk-accordion class="accordion">
+                <cdk-accordion-item #accordionFamilyPlan="cdkAccordionItem" class="accordion__item" role="button" tabindex="0"
+                  [attr.id]="[['accordion-family-label']]"
+                  [attr.aria-expanded]="accordionFamilyPlan.expanded"
+                  [attr.aria-controls]="['accordion-family']">
+                  <header class="accordion__header" (click)="accordionFamilyPlan.toggle()">
+                    <h3 class="accordion__title">Como entrar num plano família? </h3>
+                    
+                    <footer class="accordion__actions">
+                      <mat-icon *ngIf="accordionFamilyPlan.expanded" aria-hidden="false" aria-label="Abrir">keyboard_arrow_up</mat-icon>
+                      <mat-icon *ngIf="!accordionFamilyPlan.expanded" aria-hidden="false" aria-label="Fechar">keyboard_arrow_down</mat-icon>
+                  </footer>
+                  </header>
+                  <div
+                    class="accordion__content"
+                    role="region"
+                    [style.display]="accordionFamilyPlan.expanded ? '' : 'none'"
+                    [attr.id]="['accordion-family']"
+                    [attr.aria-labelledby]="['accordion-family-label']">
+                      <p>Clique <a [routerLink]="['subscription']">aqui</a> para criar um plano família</p>
+                    </div>
+                </cdk-accordion-item>
+                <cdk-accordion-item #accordionFreeMonth="cdkAccordionItem" class="accordion__item" role="button" tabindex="0"
+                    [attr.id]="[['accordion-family-label']]"
+                    [attr.aria-expanded]="accordionFreeMonth.expanded"
+                    [attr.aria-controls]="['accordion-family']">
+                    <header class="accordion__header" (click)="accordionFreeMonth.toggle()">
+                      <h3 class="accordion__title">Já utilizei meu primeiro mês gratuito. E agora?</h3>
+                      
+                      <footer class="accordion__actions">
+                        <mat-icon *ngIf="accordionFreeMonth.expanded" aria-hidden="false" aria-label="Abrir">keyboard_arrow_up</mat-icon>
+                        <mat-icon *ngIf="!accordionFreeMonth.expanded" aria-hidden="false" aria-label="Fechar">keyboard_arrow_down</mat-icon>
+                    </footer>
+                    </header>
+                    <div
+                      class="accordion__content"
+                      role="region"
+                      [style.display]="accordionFreeMonth.expanded ? '' : 'none'"
+                      [attr.id]="['accordion-family']"
+                      [attr.aria-labelledby]="['accordion-family-label']">
+                        <p>Agora você pode optar por continuar com a assinatura por apenas R$ 59,90 ou manter a versão gratuita.</p>
+                      </div>
+              </cdk-accordion-item>
+            </cdk-accordion>
         </div>
+    </div>
+    <div class="wrapper">
+        <aside class="block__aside">
+          <picture class="aside__banner">
+              <a routerLink="/subscription">
+                <img src="assets/images/banner-spotify.png" alt="Uma mão segurando um celular aberto num aplicativo do spotify">
+              </a>
+      
+              <figcaption class="screen-reader--only">
+                  <p>Eternize momentos ao som de músicas incríveis.</p>
+                  <p>O spotify te proporciona a melhor trilha sonora para sua vida.</p>
+                  <p>Inicie grátis</p>
+              </figcaption>
+          </picture>
+      </aside>
     </div>
 </div>
