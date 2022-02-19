@@ -1,0 +1,14 @@
+:host {
+    top: 50%;
+    right: -5px;
+    padding: 2rem;
+    position: fixed;
+    background-color: var(--color-white);;
+    border-radius: 60px 0 0 60px;
+    box-shadow: 0 0 15px #f2f2f2;
+
+    p {
+        margin-left: 0.5rem;
+        font-weight: bold;
+    }
+}
