@@ -1,0 +1,38 @@
+.block--download {
+    padding-top: 0;
+
+    .block__header {
+        .header__icon {
+            margin-top: 2rem;
+        }
+    }
+    
+    .block__content {
+        max-width: 960px;
+        line-height: 28px;
+       
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+
+        code {
+            color: var(--color-white);;
+            border-radius: 4px;
+            padding: 1rem;
+            display: block;
+            background-color: var(--color-black);
+            margin-bottom: 1rem;
+        }
+    }
+
+}

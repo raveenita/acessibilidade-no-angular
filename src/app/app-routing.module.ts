@@ -12,10 +12,6 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
   },
   {
-    path: 'premium',
-    loadChildren: () => import('./premium/premium.module').then((m) => m.PremiumModule),
-  },
-  {
     path: 'faq',
     loadChildren: () => import('./faq/faq.module').then((m) => m.FaqModule),
   },
@@ -26,11 +22,17 @@ const routes: Routes = [
   {
     path: 'subscription',
     loadChildren: () => import('./subscription/subscription.module').then((m) => m.SubscriptionModule),
+  },
+  {
+    path: 'download',
+    loadChildren: () => import('./download/download.module').then((m) => m.DownloadModule),
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    useHash: true
+  }), ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

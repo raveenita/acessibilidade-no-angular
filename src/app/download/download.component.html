@@ -1,0 +1,44 @@
+<section class="block block--download">
+    <header class="block__header header--internal">
+        <h2 class="header__title">Baixe o Spotify</h2>
+        <p class="header__subtitle">Escute milhões de músicas e podcasts no seu dispositivo.</p>
+        <img class="header__icon" src="assets/images/devices.svg" alt="Vetor reunindo todos os dispositivos que possuem capacidade de conexão com a internet (notebook, televisão, carro, caixa de som, console)">
+    </header>
+
+    <div class="wrapper column">
+        <div class="block__content">
+            <h2>Spotify para Linux</h2>
+
+            <p>
+                Aqui você pode encontrar diferentes maneiras de instalar o Spotify para Linux. 
+                Spotify para a plataforma Linux é um trabalho de amor de nossos engenheiros que queriam ouvir Spotify em suas máquinas de desenvolvimento Linux. E
+                Eles trabalham nisso em seu tempo livre e atualmente não é uma plataforma que apoiamos ativamente. 
+                A experiência pode ser diferente de nossos outros clientes Spotify Desktop, como Windows e Mac. 
+                Você pode nos dizer o que pensa e pedir ajuda a outros usuários no fórum Desktop (Linux) no fórum da Comunidade Spotify.
+            </p>
+
+            <h3>Instalação no Ubuntu</h3>
+            <p>
+                Vá para Spotify no Ubuntu Software e clique em instalar. Se o link não funcionar, abra o Ubuntu Software e procure por Spotify.
+            </p>
+
+            <h3>Install via command line</h3>
+
+            <h4>Debian / Ubuntu</h4>
+
+            <p>
+                O Spotify para Linux também é lançado como um pacote Debian. Nosso objetivo é que ele funcione com a versão mais recente do Suporte de Longo Prazo do Ubuntu, mas tentaremos fazê-lo funcionar para outras versões do Ubuntu e do Debian também.
+            </p>
+
+            <p>Você primeiro precisará configurar nosso repositório debian:</p>
+
+            <code>
+                curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
+                echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+            </code>
+
+            <p>Então você pode instalar o cliente Spotify:</p>
+            <code>sudo apt-get update && sudo apt-get install spotify-client</code>
+        </div>
+    </div>
+</section>
