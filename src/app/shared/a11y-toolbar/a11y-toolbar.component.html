@@ -1,0 +1,17 @@
+<nav class="toolbar">
+    <div class="wrapper">
+        <a class="toolbar__link link--content" href="#mainContent">
+            <mat-icon>accessible</mat-icon>
+            <span>Ir para conteúdo</span>
+        </a>
+        <a class="toolbar__link" (click)="decreaseFontSize()"><mat-icon>text_decrease</mat-icon>
+            <span class="screen-reader--only">Diminuir fonte</span>
+        </a>
+        <a class="toolbar__link" (click)="increaseFontSize()"><mat-icon>text_increase</mat-icon>
+            <span class="screen-reader--only">Aumentar fonte</span>
+        </a>
+        <a class="toolbar__link" (click)="toggleLightMode()"><mat-icon>light_mode</mat-icon>
+            <span class="screen-reader--only">Habilitar o modo noturno</span>
+        </a>
+    </div>
+</nav>

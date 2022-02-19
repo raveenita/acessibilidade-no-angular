@@ -1,0 +1,29 @@
+.toolbar {
+    // padding: 8px;
+    background-color: var(--color-white);;
+
+    .toolbar__link {
+        color: var(--color-black);
+        padding: 0.5rem;
+        cursor: pointer;
+
+        &:hover {
+            color: #1a8e43;
+        }
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        &.link--content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            
+            mat-icon {
+                margin-right: 1rem;
+                text-decoration: none;
+            }
+        }
+    }
+}
