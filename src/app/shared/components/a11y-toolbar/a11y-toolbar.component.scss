@@ -1,11 +1,12 @@
 .toolbar {
-    // padding: 8px;
-    background-color: var(--color-white);;
+    background-color: var(--color-white);
 
     .toolbar__link {
         color: var(--color-black);
         padding: 0.5rem;
         cursor: pointer;
+        background: none;
+        border: none;
 
         &:hover {
             color: #1a8e43;

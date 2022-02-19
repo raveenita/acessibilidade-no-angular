@@ -1,37 +1,38 @@
-<section class="block block--home">
-    <div class="home__main">
+<section class="home">
+    <div class="block block--main">
         <div class="wrapper">
             <div class="colum">
                 <div class="block__header">
-                    <h1 class="header__title">Magia nos seus fones de ouvido.</h1>
-                    <p class="header__subtitle"></p>
+                    <h2 class="header__title">Magia nos seus fones de ouvido.</h2>
                 </div>
                 <div class="block__actions">
-                    <a class="button button--primary" href="">Saiba mais</a>
-                    <a class="button button--secondary" href="">Cadastre-se</a>
+                    <a class="button button--secondary" routerLink="/download">Baixar gratuitamente</a>
                 </div>
             </div>
             <div class="colum">
                 <div class="block__image">
-                    <img src="assets/images/bg-home.png" alt="">
+                    <img src="assets/images/bg-home.png" alt="O aplicativo do spotify aberto em um iPhone, apresentando a biblioteca de uma usuária">
                 </div>
             </div>
         </div>
     </div>
-    <div class="home__video">
+    <div class="block block--video">
         <div class="wrapper">
             <div class="column">
-                <video class="video__player" controls src="assets/media/intro.mp4"></video>
+                <video class="video__player" controls>
+                    <source src="assets/media/intro.mp4">
+                    <track src="assets/media/intro.vtt" srclang="pt-br"/>
+                </video>
             </div>
-            
+
             <div class="column">
                 <header class="block__header">
                     <h2 class="header__title">Seus vizinhos te incomodam?</h2>
-                    <p class="header__subtitle">Com o spotify isso não é mais um problema.</p>
+                    <h3 class="header__subtitle">Com o spotify isso não é mais um problema.</h3>
                 </header>
 
                 <footer class="block__actions">
-                    <a class="button button--secondary" href="#">Cadastre-se</a>
+                    <a class="button button--secondary" routerLink="/subscription">Receba o primeiro mês grátis</a>
                 </footer>
             </div>
         </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit, PLATFORM_ID } from '@angular/core';
-import { Observable, of, pipe, map, mergeMap } from 'rxjs';
+import { Observable, of, pipe, map, mergeMap, forkJoin, observable } from 'rxjs';
 import { Response } from '../models/api-response.interface';
 import { ClassifiedTracks } from '../models/classified-tracks.interface';
 import { Playlist } from '../models/playlist.interface';
@@ -37,19 +37,24 @@ export class DiscoverComponent implements OnInit {
   }
  
   private getPlaylistTracks(playlists: Array<Playlist>): void {
+    const $playlists: Array<Observable<Playlist>> = [];
+
     playlists.forEach((playlist: Playlist) => {
       const playlistUrlTrack: string = playlist.tracks?.href;
 
-      this.playlistsService.getPlaylist(playlistUrlTrack).pipe(
-        map((playlistItem) => {
-          Object.entries(playlistItem).forEach(([key, value]) => {
-            const track: Track = value.track;
-    
-            this.handleTrack(track);
-          });
-        })
-      );
+      $playlists.push(this.playlistsService.getPlaylist(playlistUrlTrack));
     });
+
+    forkJoin($playlists).subscribe(
+      (playlist) => {
+        Object.entries(playlist).forEach(([key, value]) => {
+          console.log(key, value);
+          // const track: Track = value.track;
+  
+          // this.handleTrack(track);
+        });
+      }
+  );
   }
 
   private resetSavedTracks() { 

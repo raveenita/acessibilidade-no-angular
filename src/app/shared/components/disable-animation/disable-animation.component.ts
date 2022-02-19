@@ -6,7 +6,7 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
   styleUrls: ['./disable-animation.component.scss']
 })
 export class DisableAnimationComponent implements OnInit {
-  isAnimationEnable = true;
+  isAnimationDisabled = false;
 
   constructor(
     private renderer: Renderer2
@@ -17,7 +17,7 @@ export class DisableAnimationComponent implements OnInit {
   }
 
   public toggleAnimationClass() {
-    if (this.isAnimationEnable) {
+    if (this.isAnimationDisabled) {
       this.renderer.addClass(document.body, 'animate');
     } else {
       this.renderer.removeClass(document.body, 'animate');

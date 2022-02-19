@@ -10,8 +10,10 @@
 a, 
 input,
 textarea,
-button {
-    &:focus {
-        outline: 2px dashed var(--color-black);
+button,
+video {
+    &:focus,
+    &:active {
+        outline: 3px dashed var(--color-green) !important;
     }
 }

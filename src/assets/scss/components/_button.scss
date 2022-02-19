@@ -17,20 +17,22 @@
 
     &.button {
         &--primary {
-            background-color: #3e7f2a; // var(--color-medium-green);
+            background-color: var(--color-medium-green); // var(--color-medium-green);
 
             &:hover {
                 color: var(--color-white) !important;
-                background-color: #409028;
+                background-color: var(--color-green);
             }
         }
 
         &--secondary {
-            border-color: var(--color-white);
+            background-color: var(--color-blue);
+
+            &:hover {
+                background-color: var(--color-medium-blue); 
+            }
         }
 
-        &--tertiary {
-            
-        }
+      
     }
 }

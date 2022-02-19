@@ -1,10 +1,11 @@
-.block--home {
-    .home__main {
+.home {
+    .block--main {
+        padding-bottom: 0;
         overflow: hidden;
         position: relative;
         padding-top: 2rem;
         min-height: calc(100vh - 80px);
-        background-color: #f6c266;
+        background-color: var(--color-orange);
 
         &:before {
             top: -65px;
@@ -14,35 +15,37 @@
             height: 400px;
             border-radius: 100%;
             position: absolute;
-            background-color: #283b97;
+            background-color: var(--color-blue);
         }
-    
+
         .block__image {
             margin-left: 3rem;
     
             img {
-                max-width: 595px;
+                max-width: 600px;
             }
         }
     
         .block__header {
+            text-align: left;
+
             .header__title {
                 font-size: 4rem;
-                color: #283b97;
+                color: var(--color-blue);
             }
         }   
     }
     
-    .home__video {
-        background-color: #586bef;
+    .block--video {
+        background-color: var(--color-blue);
         padding: {
-            top: 5rem;
-            bottom: 5rem;
+            top: 6rem;
+            bottom: 6rem;
         }
     
         .block__header {
             margin-bottom: 3rem;
-            color: #ffd740;
+            color: var(--color-orange);
             text-align: right;
     
             .header__title {
@@ -52,7 +55,8 @@
             }
     
             .header__subtitle {
-                font-size: 1.3rem;
+                font-size: 1.2rem;
+                font-weight: bold;
             }
         }
     
@@ -66,9 +70,16 @@
             text-align: right;
 
             .button {
-                color: #ffd740;
-                border-color: #ffd740;
+                color: var(--color-orange);
+                border-color: var(--color-orange);
+
+                &:hover {
+                    color: var(--color-blue);
+                    background-color: var(--color-orange);
+                }
             }
         }
     }
 }
+
+
