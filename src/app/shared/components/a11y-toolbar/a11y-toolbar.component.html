@@ -6,13 +6,13 @@
         <a class="toolbar__link link--content" [href]="skipLinkPath">
             <span>Pular para conteúdo</span>
         </a>
-        <a tabindex="0" class="toolbar__link" (click)="decreaseFontSize()"><mat-icon>text_decrease</mat-icon>
+        <a tabindex="0" class="toolbar__link"><mat-icon>text_decrease</mat-icon>
             <span class="screen-reader--only">Diminuir fonte</span>
         </a>
-        <a  tabindex="0" class="toolbar__link" (click)="increaseFontSize()"><mat-icon>text_increase</mat-icon>
+        <a  tabindex="0" class="toolbar__link"><mat-icon>text_increase</mat-icon>
             <span class="screen-reader--only">Aumentar fonte</span>
         </a>
-        <button [attr.aria-checked]="isHighContrastEnabled" class="toolbar__link" (click)="toggleContrastMode()"><mat-icon>light_mode</mat-icon>
+        <button class="toolbar__link" (click)="toggleContrastMode()"><mat-icon>light_mode</mat-icon>
             <span class="screen-reader--only">{{ highContrastAction }} o modo alto contraste</span>
         </button>
     </div>

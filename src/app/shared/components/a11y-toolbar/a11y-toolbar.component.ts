@@ -36,21 +36,11 @@ export class A11yToolbarComponent implements OnInit {
   }
 
   public increaseFontSize() {
-    const htmlElement = document.querySelector('html');
-
-    if (htmlElement !== null) {
-      let fontSize = this.getElementFontSize(htmlElement);
-      this.renderer.setStyle(htmlElement, 'font-size', `${++fontSize}px`);
-    }
+    // TODO #9: Controle de tamanho da fonte
   }
 
   public decreaseFontSize() {
-    const htmlElement = document.querySelector('html');
-
-    if (htmlElement !== null) {
-      let fontSize = this.getElementFontSize(htmlElement);
-      this.renderer.setStyle(htmlElement, 'font-size', `${--fontSize}px`);
-    }
+    // TODO #9: Controle de tamanho da fonte
   }
 
   public toggleContrastMode(): void {
