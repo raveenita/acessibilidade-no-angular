@@ -10,35 +10,27 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
-
+    // TODO #1 Páginas com títulos acessíveis
   },
   {
     path: 'faq',
     loadChildren: () => import('./faq/faq.module').then((m) => m.FaqModule),
-    data: {
-      title: 'Perguntas Frequentes - Acessibilidade no Angular'
-    }
+    // TODO #1 Páginas com títulos acessíveis
   },
   {
     path: 'discover',
     loadChildren: () => import('./discover/discover.module').then((m) => m.DiscoverModule),
-    data: {
-      title: 'Descubra sua música favorita - Acessibilidade no Angular'
-    }
+    // TODO #1 Páginas com títulos acessíveis
   },
   {
     path: 'subscription',
     loadChildren: () => import('./subscription/subscription.module').then((m) => m.SubscriptionModule),
-    data: {
-      title: 'Cadastre-se no Spotify - Acessibilidade no Angular'
-    }
+    // TODO #1 Páginas com títulos acessíveis
   },
   {
     path: 'download',
     loadChildren: () => import('./download/download.module').then((m) => m.DownloadModule),
-    data: {
-      title: 'Baixe o Spotify - Acessibilidade no Angular'
-    }
+    // TODO #1 Páginas com títulos acessíveis
   }
 ];
 
