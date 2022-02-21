@@ -10,7 +10,7 @@ import { SuccessDialogComponent } from './success-dialog/success-dialog.componen
   templateUrl: './subscription.component.html',
   styleUrls: ['./subscription.component.scss']
 })
-export class SubscriptionComponent implements OnInit {
+export class SubscriptionComponent {
   public genders: Array<string> = [
     COMMON_GENRES.Feminine,
     COMMON_GENRES.Masculine,
@@ -27,7 +27,6 @@ export class SubscriptionComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private dialog: MatDialog,
-    private liveAnnouncer: LiveAnnouncer
   ) { }
 
   public subscriptionForm: FormGroup = this.formBuilder.group({
@@ -38,17 +37,18 @@ export class SubscriptionComponent implements OnInit {
     interest: ['', Validators.required],
   });
 
-  
-
-  public ngOnInit(): void {
-  }
-
   public registerNewUser() {
     if(this.subscriptionForm.valid) {
       this.openSuccessDialog();
     } else {
-      this.subscriptionForm.markAllAsTouched();
+      alert('Preencha todos os campos!');
+      // TODO #5: Formulário acessível
+      // TODO #6: Anunciar mudanças aos leitores de tela
     }
+  }
+
+  public onSelectionChange() {
+    // TODO #6: Anunciar mudanças aos leitores de tela
   }
 
   public openSuccessDialog() {
@@ -63,7 +63,7 @@ export class SubscriptionComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(() => {
-      this.liveAnnouncer.announce('Modal fechada.');
+      // TODO #6: Anunciar mudanças aos leitores de tela
     });
   }
  

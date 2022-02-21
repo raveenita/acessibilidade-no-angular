@@ -9,45 +9,43 @@
    <div class="wrapper column">
         <form class="form--subscription" [formGroup]="subscriptionForm" (ngSubmit)="registerNewUser()">
             <div class="form__group">
-                <label class="input__label" for="name">Nome</label>
-                <input type="text" placeholder="Digite seu nome..." id="name" 
-                class="form__input" formControlName="name" aria-describedby="error-name">
-                <mat-error id="error-name" *ngIf="form['name'].touched && form['name']?.errors">O campo é obrigatório</mat-error>
+                <!-- TODO #5: Formulário acessível -->
+                <label class="input__label">Nome</label>
+                <input type="text" id="name" 
+                class="form__input" formControlName="name">
             </div>
             <div class="form__group">
-                <label class="input__label" for="email">E-mail</label>
-                <input type="email" placeholder="Informe seu e-mail..."
-                name="email" id="email" class="form__input" formControlName="email">
-                <mat-hint>Informe um e-mail no formato usuario@dominio.com.br</mat-hint>
-                <mat-error *ngIf="form['email'].touched && form['email']?.errors">O campo é obrigatório</mat-error>
+                <!-- TODO #5: Formulário acessível -->
+                <label class="input__label">E-mail</label>
+                <input type="text" name="email" id="email" class="form__input" formControlName="email">
             </div>
             <div class="form__group">
-                <label class="input__label" for="secretKeyword">Senha</label>
-                <input type="password" placeholder="Digite uma senha..." 
-                name="secretKeyword"  id="secretKeyword" class="form__input" formControlName="secretKeyword">
-                <mat-error *ngIf="form['secretKeyword'].touched && form['secretKeyword']?.errors">O campo é obrigatório</mat-error>
+                <!-- TODO #5: Formulário acessível -->
+                <label class="input__label">Senha</label>
+                <input type="password" name="secretKeyword"  id="secretKeyword" 
+                class="form__input" formControlName="secretKeyword">
             </div>
             <div class="form__group">
                 <label class="input__label">Interesses</label>
+
+                <!-- TODO #5: Formulário acessível -->
                 
                 <mat-form-field appearance="fill" class="group__select">
-                    <mat-label id="interest-description">Qual seu principal interesse no spotify?</mat-label>
-                    <mat-select aria-label="interest-label" aria-labelledby="interest-description" formControlName="interest">
+                    <mat-label >Qual seu principal interesse no spotify?</mat-label>
+                    <mat-select formControlName="interest">
                         <mat-option>Nenhum</mat-option>
                         <mat-option *ngFor="let interest of interests" [value]="interest">{{ interest }}</mat-option>
                     </mat-select>
                 </mat-form-field>
 
-                <mat-error *ngIf="form['interest']?.touched && form['interest']?.errors">O campo é obrigatório</mat-error>
             </div>
             <div class="form__group">
-                    <mat-radio-group class="genders__options" formControlName="gender">
+                <!-- TODO #5: Formulário acessível -->
+                <mat-radio-group class="genders__options" formControlName="gender">
                     <mat-radio-button class="option__gender" *ngFor="let gender of genders" [value]="gender">
                         {{ gender }}
                     </mat-radio-button>
                 </mat-radio-group>
-
-                <mat-error *ngIf="form['gender']?.touched && form['gender']?.errors">O campo é obrigatório</mat-error>
             </div>
 
             <!-- TODO #2: Código semântico -->

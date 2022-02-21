@@ -11,7 +11,6 @@ import { MatSelectModule } from '@angular/material/select';
 import { SuccessDialogComponent } from './success-dialog/success-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
-import { A11yModule } from '@angular/cdk/a11y';
 
 @NgModule({
   declarations: [
@@ -29,8 +28,7 @@ import { A11yModule } from '@angular/cdk/a11y';
     MatSelectModule,
     FormsModule,
     MatDialogModule,
-    MatInputModule,
-    A11yModule
+    MatInputModule
   ]
 })
 export class SubscriptionModule { }
