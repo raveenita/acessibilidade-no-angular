@@ -53,47 +53,7 @@ export class A11yToolbarComponent implements OnInit {
     }
   }
 
-  public toggleLightMode(): void {
-    const bodyElement = document.querySelector('body');
-    this.isHighContrastEnabled = this.isHighContrastEnabled === false ? true : false;
-
-    if (this.isHighContrastEnabled == true) {
-      this.setCssVariables();
-      bodyElement?.classList.add('mode--high-contrast');
-      this.highContrastAction = 'Desabilitar';
-    } else {
-      this.resetCssVariables();
-      bodyElement?.classList.remove('mode--high-contrast');
-      this.highContrastAction = 'Habilitar';
-    }
- }
-
-  private setCssVariables() {
-    const root: HTMLElement = document.documentElement;
-
-    root.style.setProperty('--color-white', "#000");
-    root.style.setProperty('--color-black', "#fff");
-    root.style.setProperty('--color-blue', "#ffcb6e");
-    root.style.setProperty('--color-medium-blue', "#fff94e");
-    root.style.setProperty('--color-orange', "#1330ff");
-    root.style.setProperty('--color-medium-orange', "#0018c1");
-    root.style.setProperty('--color-green', "#00ff5b");
-    root.style.setProperty('--color-medium-green', "#00ff5b");
-    root.style.setProperty('--color-pink', "#d50465");
-    root.style.setProperty('--color-medium-pink', "#ffbaea");
-  }
-
-  private resetCssVariables() {
-    const root: HTMLElement = document.documentElement;
-    root.style.removeProperty('--color-white');
-    root.style.removeProperty('--color-black');
-    root.style.removeProperty('--color-blue');
-    root.style.removeProperty('--color-medium-blue');
-    root.style.removeProperty('--color-orange');
-    root.style.removeProperty('--color-medium-orange');
-    root.style.removeProperty('--color-green');
-    root.style.removeProperty('--color-medium-green');
-    root.style.removeProperty('--color-pink');
-    root.style.removeProperty('--color-medium-pink');
+  public toggleContrastMode(): void {
+      // TODO #8: Contraste de cores
   }
 }
