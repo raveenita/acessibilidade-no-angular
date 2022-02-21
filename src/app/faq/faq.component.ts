@@ -5,13 +5,5 @@ import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
   templateUrl: './faq.component.html',
   styleUrls: ['./faq.component.scss']
 })
-export class FaqComponent implements OnInit, OnDestroy {
-  constructor() { }
-
-  ngOnDestroy(): void {
-    
-  }
-
-  ngOnInit(): void {
-  }
+export class FaqComponent {
 }
