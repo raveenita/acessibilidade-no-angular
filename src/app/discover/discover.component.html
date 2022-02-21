@@ -1,5 +1,7 @@
-<section class="block block--discover" id="main-content">
+<!-- TODO #2: Código semântico -->
+<div class="block block--discover" id="main-content">
     <div class="wrapper column">
+        <!-- TODO #2: Código semântico -->
         <div class="block__header">
             <h1 class="header__title">Favorite Music Tracker</h1>
             <p class="header__subtitle">Descubra a música que mais aparece em suas playlists.</p>
@@ -13,16 +15,19 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 
-<section class="block block--instructions">
+<!-- TODO #2: Código semântico -->
+<div class="block block--instructions">
     <div class="wrapper column">
+        <!-- TODO #2: Código semântico -->
         <div class="block__header">
             <h1 class="header__title">Logue com o spotify e clique em <mark>Descobrir</mark>.</h1>
         </div>
-    </div>
-</section>
 
-<div *ngIf="classifiedTracks !== undefined">
-    <app-search-result [tracks]="classifiedTracks"></app-search-result>
+        <div *ngIf="classifiedTracks !== undefined">
+            <app-search-result [tracks]="classifiedTracks"></app-search-result>
+        </div>
+    </div>
 </div>
+

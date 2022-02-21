@@ -1,22 +1,23 @@
-<h1 class="screen-reader--only">Spotify</h1>
-
 <app-a11y-toolbar></app-a11y-toolbar>
 
-<header class="header">
+<!-- TODO #2: Código semântico -->
+<div class="header">
     <div class="wrapper">
         <a [routerLink]="['/home']">
             <img class="header__logo" alt="Logo da spotify" src="assets/images/spotify.svg"/>
         </a>
         
-        <nav class="header__nav">
-            <header class="block__header screen-reader--only">
+        <!-- TODO #2: Código semântico -->
+        <div class="header__nav">
+            <!-- TODO #2: Código semântico -->
+            <div class="block__header screen-reader--only">
                 <h2 class="header__title">Menu de navegação</h2>
-            </header>
+            </div>
 
             <a class="nav__link" [routerLink]="['faq']">Perguntas Frequentes</a>
             <a class="nav__link" [routerLink]="['subscription']">Cadastrar</a>
             <a class="nav__link" [routerLink]="['/download']">Download</a>
             <a class="nav__link button button--primary" [routerLink]="['discover']">Descubra sua música favorita</a>
-        </nav>
+        </div>
     </div>
-</header>
+</div>

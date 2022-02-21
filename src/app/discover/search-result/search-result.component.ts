@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ClassifiedTracks } from 'src/app/models/classified-tracks.interface';
-import { Track } from 'src/app/models/track.interface';
 
 @Component({
   selector: 'app-search-result',

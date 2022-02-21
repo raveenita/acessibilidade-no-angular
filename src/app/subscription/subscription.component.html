@@ -1,8 +1,10 @@
-<section class="block block--subscription">
-    <header class="block__header">
-        <h2 class="header__title">Inscreva-se grátis e comece a curtir.</h2>
+<!-- TODO #2: Código semântico -->
+<div class="block block--subscription">
+    <!-- TODO #2: Código semântico -->
+    <div class="block__header">
+        <h3 class="header__title">Inscreva-se grátis e comece a curtir.</h3>
         <p class="header__subtitle">O primeiro mês é por nossa conta. =)</p>
-    </header>
+    </div>
     
    <div class="wrapper column">
         <form class="form--subscription" [formGroup]="subscriptionForm" (ngSubmit)="registerNewUser()">
@@ -48,9 +50,10 @@
                 <mat-error *ngIf="form['gender']?.touched && form['gender']?.errors">O campo é obrigatório</mat-error>
             </div>
 
-            <footer class="form__actions">
+            <!-- TODO #2: Código semântico -->
+            <div class="form__actions">
                 <button class="button button--primary" type="submit">Cadastrar</button>
-            </footer>
+            </div>
         </form>
    </div>
-</section>
+</div>
