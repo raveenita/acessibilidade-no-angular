@@ -1,27 +1,42 @@
-# AcessibilidadeAngular
+# Acessibilidade no Spotify
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+Esse projeto foi desenvolvido para a palestra sobre acessibilidade no Angular.
 
-## Development server
+O [material de apoio]( https://docs.google.com/presentation/d/1sRKlWaZnzOs8Gh8JaOqhPVkp3rUW5tWf/edit?usp=sharing&ouid=101976448401744700763&rtpof=true&sd=true) pode ser consultado no Google Drive.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Instalação
 
-## Code scaffolding
+Clone para sua máquina através do seguinte comando:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+git clone -b https://github.com/Uncodle/acessibilidade-no-angular 
+```
 
-## Build
+Entre na pasta **acessibilidade-no-angular**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+cd acessibilidade-no-angular/
+```
 
-## Running unit tests
+Rode o comando para instalar as dependências do projeto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+npm install
+```
 
-## Running end-to-end tests
+Feito isso, basta rodar o `npm start`.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Para subir o servidor que se conecta com o spotify, entre na pasta **backend** 
 
-## Further help
+```bash
+cd acessibilidade-no-angular/
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Rode o comando para instalar as dependências
+
+```bash
+npm install
+```
+
+E por fim, rode o `npm start`
+
