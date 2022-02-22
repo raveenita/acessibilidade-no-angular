@@ -16,28 +16,28 @@ const routes: Routes = [
     path: 'faq',
     loadChildren: () => import('./faq/faq.module').then((m) => m.FaqModule),
     data: {
-      title: 'Perguntas Frequentes - Acessibilidade no Angular'
+      title: 'Perguntas Frequentes | Acessibilidade no Spotify'
     }
   },
   {
     path: 'discover',
     loadChildren: () => import('./discover/discover.module').then((m) => m.DiscoverModule),
     data: {
-      title: 'Descubra sua música favorita - Acessibilidade no Angular'
+      title: 'Descubra sua música favorita | Acessibilidade no Spotify'
     }
   },
   {
     path: 'subscription',
     loadChildren: () => import('./subscription/subscription.module').then((m) => m.SubscriptionModule),
     data: {
-      title: 'Cadastre-se no Spotify - Acessibilidade no Angular'
+      title: 'Cadastre-se no Spotify | Acessibilidade no Spotify'
     }
   },
   {
     path: 'download',
     loadChildren: () => import('./download/download.module').then((m) => m.DownloadModule),
     data: {
-      title: 'Baixe o Spotify - Acessibilidade no Angular'
+      title: 'Baixe o Spotify | Acessibilidade no Spotify'
     }
   }
 ];
