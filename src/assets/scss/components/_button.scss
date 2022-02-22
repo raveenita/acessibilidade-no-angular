@@ -1,8 +1,8 @@
 .button {
     line-height: 1;
     color: var(--color-white);
-    padding: 1rem 2rem;
     text-decoration: none;
+    padding: 1rem 2rem;
     display: inline-block;
     font-size: 1.1rem;
     font-weight: bold;
@@ -33,6 +33,14 @@
             }
         }
 
-      
+        &--tertiary {
+            color: var(--color-orange);
+            border-color: var(--color-orange);
+
+            &:hover {
+                color: var(--color-blue);
+                background-color: var(--color-orange);
+            }
+        }
     }
 }

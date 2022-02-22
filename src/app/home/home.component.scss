@@ -68,16 +68,6 @@
     
         .block__actions {
             text-align: right;
-
-            .button {
-                color: var(--color-orange);
-                border-color: var(--color-orange);
-
-                &:hover {
-                    color: var(--color-blue);
-                    background-color: var(--color-orange);
-                }
-            }
         }
     }
 }
