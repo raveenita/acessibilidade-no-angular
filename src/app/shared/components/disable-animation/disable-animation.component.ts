@@ -10,7 +10,7 @@ export class DisableAnimationComponent {
   constructor() { }
 
   public toggleAnimationClass() {
-    // TODO #4: Alternativa para o usuário controlar mídias e animações
+    // TODO #5: Alternativa para o usuário controlar mídias e animações
   }
 
 }

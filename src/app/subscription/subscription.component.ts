@@ -42,13 +42,13 @@ export class SubscriptionComponent {
       this.openSuccessDialog();
     } else {
       alert('Preencha todos os campos!');
-      // TODO #5: Formulário acessível
-      // TODO #6: Anunciar mudanças aos leitores de tela
+      // TODO #6: Formulário acessível
+      // TODO #7: Anunciar mudanças aos leitores de tela
     }
   }
 
   public onSelectionChange() {
-    // TODO #6: Anunciar mudanças aos leitores de tela
+    // TODO #7: Anunciar mudanças aos leitores de tela
   }
 
   public openSuccessDialog() {
@@ -63,7 +63,7 @@ export class SubscriptionComponent {
     });
 
     dialogRef.afterClosed().subscribe(() => {
-      // TODO #6: Anunciar mudanças aos leitores de tela
+      // TODO #7: Anunciar mudanças aos leitores de tela
     });
   }
  

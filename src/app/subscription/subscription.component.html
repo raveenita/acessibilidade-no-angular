@@ -9,18 +9,18 @@
    <div class="wrapper column">
         <form class="form--subscription" [formGroup]="subscriptionForm" (ngSubmit)="registerNewUser()">
             <div class="form__group">
-                <!-- TODO #5: Formulário acessível -->
+                <!-- TODO #6: Formulário acessível -->
                 <label class="input__label">Nome</label>
                 <input type="text" id="name" 
                 class="form__input" formControlName="name">
             </div>
             <div class="form__group">
-                <!-- TODO #5: Formulário acessível -->
+                <!-- TODO #6: Formulário acessível -->
                 <label class="input__label">E-mail</label>
                 <input type="text" name="email" id="email" class="form__input" formControlName="email">
             </div>
             <div class="form__group">
-                <!-- TODO #5: Formulário acessível -->
+                <!-- TODO #6: Formulário acessível -->
                 <label class="input__label">Senha</label>
                 <input type="password" name="secretKeyword"  id="secretKeyword" 
                 class="form__input" formControlName="secretKeyword">
@@ -28,7 +28,7 @@
             <div class="form__group">
                 <label class="input__label">Interesses</label>
 
-                <!-- TODO #5: Formulário acessível -->
+                <!-- TODO #6: Formulário acessível -->
                 
                 <mat-form-field appearance="fill" class="group__select">
                     <mat-label >Qual seu principal interesse no spotify?</mat-label>
@@ -40,7 +40,7 @@
 
             </div>
             <div class="form__group">
-                <!-- TODO #5: Formulário acessível -->
+                <!-- TODO #6: Formulário acessível -->
                 <mat-radio-group class="genders__options" formControlName="gender">
                     <mat-radio-button class="option__gender" *ngFor="let gender of genders" [value]="gender">
                         {{ gender }}

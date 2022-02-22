@@ -9,7 +9,7 @@
 
         <div class="block__questions" id="main-content">
             <cdk-accordion class="accordion">
-               <!-- TODO #7: Interface de usuário acessível -->
+               <!-- TODO #8: Interface de usuário acessível -->
                 <cdk-accordion-item  class="accordion__item"
                   #accordionFamilyPlan="cdkAccordionItem"
                   [attr.id]="['labelAccordionFamily']">
@@ -23,9 +23,9 @@
                       <p>Clique <a [routerLink]="['subscription']">aqui</a> para criar um plano família</p>
                   </div>
 
-                  <!-- TODO #7: Interface de usuário acessível -->
+                  <!-- TODO #8: Interface de usuário acessível -->
                 </cdk-accordion-item>
-                <!-- TODO #7: Interface de usuário acessível -->
+                <!-- TODO #8: Interface de usuário acessível -->
                 <cdk-accordion-item #accordionFreeMonth="cdkAccordionItem" class="accordion__item"
                     [attr.id]="['labelAccordionFreeMonth']">
                     <div class="accordion__header" (click)="accordionFreeMonth.toggle()">
@@ -38,7 +38,7 @@
                         <p>Agora você pode optar por continuar com a assinatura por apenas R$ 59,90 ou manter a versão gratuita.</p>
                     </div>
 
-                    <!-- TODO #7: Interface de usuário acessível -->
+                    <!-- TODO #8: Interface de usuário acessível -->
               </cdk-accordion-item>
             </cdk-accordion>
         </div>
@@ -47,7 +47,7 @@
       <!-- TODO #2: Código semântico -->
         <div class="block__aside">
           <a routerLink="/subscription">
-            <!-- TODO #3: Mídias audio visuais acessíveis -->
+            <!-- TODO #4: Mídias audio visuais acessíveis -->
             <img src="assets/images/banner-spotify.png">
           </a>
       </div>

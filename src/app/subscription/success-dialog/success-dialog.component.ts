@@ -23,7 +23,7 @@ export class SuccessDialogComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // TODO #6: Anunciar mudanças aos leitores de tela
+    // TODO #7: Anunciar mudanças aos leitores de tela
   }
 
   closeModal(): void {

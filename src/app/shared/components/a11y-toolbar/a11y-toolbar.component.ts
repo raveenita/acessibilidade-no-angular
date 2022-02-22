@@ -13,18 +13,18 @@ export class A11yToolbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // TODO #10: Skip link e navegação por teclado
+    // TODO #11: Skip link e navegação por teclado
   }
 
   public increaseFontSize() {
-    // TODO #9: Controle de tamanho da fonte
+    // TODO #10: Controle de tamanho da fonte
   }
 
   public decreaseFontSize() {
-    // TODO #9: Controle de tamanho da fonte
+    // TODO #10: Controle de tamanho da fonte
   }
 
   public toggleContrastMode(): void {
-      // TODO #8: Contraste de cores
+      // TODO #9: Contraste de cores
   }
 }
