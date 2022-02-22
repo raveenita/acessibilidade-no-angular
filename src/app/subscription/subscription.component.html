@@ -29,17 +29,17 @@
                 <mat-error *ngIf="form['secretKeyword'].touched && form['secretKeyword']?.errors">O campo é obrigatório</mat-error>
             </div>
             <div class="form__group">
-                <label class="input__label">Interesses</label>
+                <label class="input__label" for="plan">Plano</label>
                 
                 <mat-form-field appearance="fill" class="group__select">
-                    <mat-label id="interest-description">Qual seu principal interesse no spotify?</mat-label>
-                    <mat-select aria-label="interest-label" aria-labelledby="interest-description" formControlName="interest">
+                    <mat-label id="plan-description">Qual plano você deseja contratar?</mat-label>
+                    <mat-select id="plan" aria-label="plan-label" aria-labelledby="plan-description" formControlName="plan">
                         <mat-option>Nenhum</mat-option>
-                        <mat-option *ngFor="let interest of interests" [value]="interest">{{ interest }}</mat-option>
+                        <mat-option *ngFor="let plan of plans" [value]="plan">{{ plan }}</mat-option>
                     </mat-select>
                 </mat-form-field>
 
-                <mat-error *ngIf="form['interest']?.touched && form['interest']?.errors">O campo é obrigatório</mat-error>
+                <mat-error *ngIf="form['plan']?.touched && form['plan']?.errors">O campo é obrigatório</mat-error>
             </div>
             <div class="form__group">
                     <mat-radio-group class="genders__options" formControlName="gender">

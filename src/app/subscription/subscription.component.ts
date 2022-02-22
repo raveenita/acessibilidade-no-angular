@@ -10,14 +10,14 @@ import { SuccessDialogComponent } from './success-dialog/success-dialog.componen
   templateUrl: './subscription.component.html',
   styleUrls: ['./subscription.component.scss']
 })
-export class SubscriptionComponent implements OnInit {
+export class SubscriptionComponent {
   public genders: Array<string> = [
     COMMON_GENRES.Feminine,
     COMMON_GENRES.Masculine,
     COMMON_GENRES.NonBinary
   ];
-  public interests = [
-    'Podcasts', 'Músicas antigas', 'Hits da internet'
+  public plans = [
+    'Individual', 'Família', 'Universitário'
   ];
 
   get form() { 
@@ -38,11 +38,6 @@ export class SubscriptionComponent implements OnInit {
     interest: ['', Validators.required],
   });
 
-  
-
-  public ngOnInit(): void {
-  }
-
   public registerNewUser() {
     if(this.subscriptionForm.valid) {
       this.openSuccessDialog();
@@ -58,7 +53,7 @@ export class SubscriptionComponent implements OnInit {
         email: this.subscriptionForm.get('email')?.value,
         password: this.subscriptionForm.get('secretKeyword')?.value,
         gender: this.subscriptionForm.get('gender')?.value,
-        interest: this.subscriptionForm.get('interest')?.value,
+        plan: this.subscriptionForm.get('plan')?.value,
       },
     });
 
