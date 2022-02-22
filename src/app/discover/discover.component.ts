@@ -1,4 +1,5 @@
 import { Component, OnInit, PLATFORM_ID } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Observable, of, pipe, map, mergeMap, forkJoin, observable } from 'rxjs';
 import { ClassifiedTracks } from '../models/classified-tracks.interface';
 import { Playlist } from '../models/playlist.interface';
@@ -18,10 +19,15 @@ export class DiscoverComponent implements OnInit {
   public repetitions = {}
 
   constructor(
+    private readonly activatedRoute: ActivatedRoute,
     private readonly playlistsService: PlaylistsService
   ) { }
 
   ngOnInit(): void {
+    const fragment = this.activatedRoute.snapshot.fragment;
+    const accessToken = fragment ? fragment.split('=')[1] : null; 
+    
+    sessionStorage.setItem('access_token', accessToken as string);
   }
 
   public getFavoriteTracksFromUserPlaylists() {
