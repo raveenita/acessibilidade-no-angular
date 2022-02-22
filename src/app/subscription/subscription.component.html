@@ -19,7 +19,8 @@
                 name="email" id="email" class="form__input" formControlName="email">
                 <mat-icon>alternate_email</mat-icon>
                 <mat-hint>Informe um e-mail no formato usuario@dominio.com.br</mat-hint>
-                <mat-error *ngIf="form['email'].touched && form['email']?.errors">O campo é obrigatório</mat-error>
+                <mat-error *ngIf="form['email'].touched && form['email']?.errors!['email']">O e-mail não é válido.</mat-error>
+                <mat-error *ngIf="form['email'].touched && form['email']?.errors!['required']">O campo é obrigatório</mat-error>
             </div>
             <div class="form__group">
                 <label class="input__label" for="secretKeyword">Senha</label>

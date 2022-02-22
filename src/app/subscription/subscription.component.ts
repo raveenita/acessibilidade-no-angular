@@ -32,10 +32,13 @@ export class SubscriptionComponent {
 
   public subscriptionForm: FormGroup = this.formBuilder.group({
     name: ['', Validators.required],
-    email: ['', Validators.required],
+    email: ['', [
+      Validators.required,
+      Validators.email
+    ]],
     secretKeyword: ['', Validators.required],
     gender: ['', Validators.required],
-    interest: ['', Validators.required],
+    plan: ['', Validators.required],
   });
 
   public registerNewUser() {
