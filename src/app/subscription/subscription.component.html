@@ -10,12 +10,14 @@
                 <label class="input__label" for="name">Nome</label>
                 <input type="text" placeholder="Digite seu nome..." id="name" 
                 class="form__input" formControlName="name" aria-describedby="error-name">
+                <mat-icon>person</mat-icon>
                 <mat-error id="error-name" *ngIf="form['name'].touched && form['name']?.errors">O campo é obrigatório</mat-error>
             </div>
             <div class="form__group">
                 <label class="input__label" for="email">E-mail</label>
                 <input type="email" placeholder="Informe seu e-mail..."
                 name="email" id="email" class="form__input" formControlName="email">
+                <mat-icon>alternate_email</mat-icon>
                 <mat-hint>Informe um e-mail no formato usuario@dominio.com.br</mat-hint>
                 <mat-error *ngIf="form['email'].touched && form['email']?.errors">O campo é obrigatório</mat-error>
             </div>
@@ -23,6 +25,7 @@
                 <label class="input__label" for="secretKeyword">Senha</label>
                 <input type="password" placeholder="Digite uma senha..." 
                 name="secretKeyword"  id="secretKeyword" class="form__input" formControlName="secretKeyword">
+                <mat-icon>lock</mat-icon>
                 <mat-error *ngIf="form['secretKeyword'].touched && form['secretKeyword']?.errors">O campo é obrigatório</mat-error>
             </div>
             <div class="form__group">

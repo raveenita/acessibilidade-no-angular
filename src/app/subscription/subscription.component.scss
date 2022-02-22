@@ -14,6 +14,12 @@
             margin-bottom: 0.65rem;
         }
 
+        .mat-icon {
+            top: 44px;
+            right: 15px;
+            position: absolute;
+        }
+
         .mat-error,
         .mat-hint {
             margin-top: 10px;
@@ -34,11 +40,17 @@
                 &.ng-invalid {
                     border-color: var(--color-red);
                 }
+
+                &.ng-invalid,
+                & + .mat-icon {
+                    color: var(--color-red);
+                }
             }
         }
     
         .form__group { 
             margin-bottom: 1rem;
+            position: relative;
         }
 
         .form__actions {
