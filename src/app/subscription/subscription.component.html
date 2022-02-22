@@ -26,15 +26,15 @@
                 class="form__input" formControlName="secretKeyword">
             </div>
             <div class="form__group">
-                <label class="input__label">Interesses</label>
+                <label class="input__label">Plano</label>
 
                 <!-- TODO #6: Formulário acessível -->
                 
                 <mat-form-field appearance="fill" class="group__select">
-                    <mat-label >Qual seu principal interesse no spotify?</mat-label>
-                    <mat-select formControlName="interest">
+                    <mat-label id="plan-description">Qual plano você deseja contratar?</mat-label>
+                    <mat-select id="plan" aria-label="plan-label" aria-labelledby="plan-description" formControlName="plan">
                         <mat-option>Nenhum</mat-option>
-                        <mat-option *ngFor="let interest of interests" [value]="interest">{{ interest }}</mat-option>
+                        <mat-option *ngFor="let plan of plans" [value]="plan">{{ plan }}</mat-option>
                     </mat-select>
                 </mat-form-field>
 

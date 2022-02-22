@@ -16,8 +16,8 @@ export class SubscriptionComponent {
     COMMON_GENRES.Masculine,
     COMMON_GENRES.NonBinary
   ];
-  public interests = [
-    'Podcasts', 'Músicas antigas', 'Hits da internet'
+  public plans = [
+    'Individual', 'Família', 'Universitário'
   ];
 
   get form() { 
