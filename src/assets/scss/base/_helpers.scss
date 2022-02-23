@@ -1,3 +1,9 @@
+.screen-reader--only {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    text-indent: -9999px;
+}
 
 .no-padding {
     padding: 0 !important;

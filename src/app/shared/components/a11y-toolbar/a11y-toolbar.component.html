@@ -1,10 +1,19 @@
-<div class="toolbar">
+<nav class="toolbar">
+    <header class="block__header screen-reader--only">
+        <h2 class="header__title">Ferramentas de acessibilidade</h2>
+    </header>
     <div class="wrapper">
-        <a class="toolbar__link link--content" href="#main-content">
+        <a class="toolbar__link link--content" [href]="skipLinkPath">
             <span>Pular para conteúdo</span>
         </a>
-        <a class="toolbar__link"><mat-icon>text_decrease</mat-icon></a>
-        <a class="toolbar__link"><mat-icon>text_increase</mat-icon></a>
-        <button class="toolbar__link"><mat-icon>light_mode</mat-icon></button>
+        <a class="toolbar__link" tabindex="0"  (click)="decreaseFontSize()"><mat-icon>text_decrease</mat-icon>
+            <span class="screen-reader--only">Diminuir fonte</span>
+        </a>
+        <a class="toolbar__link"  tabindex="0" (click)="increaseFontSize()"><mat-icon>text_increase</mat-icon>
+            <span class="screen-reader--only">Aumentar fonte</span>
+        </a>
+        <button role="switch" [attr.aria-checked]="isHighContrastEnabled" class="toolbar__link" (click)="toggleLightMode()"><mat-icon>light_mode</mat-icon>
+            <span class="screen-reader--only">{{ highContrastAction }} o modo alto contraste</span>
+        </button>
     </div>
-</div>
+</nav>

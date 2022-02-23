@@ -1,12 +1,11 @@
-<!-- TODO #2: Código semântico -->
-<div class="block block--download">
-  <!-- TODO #2: Código semântico -->
-    <div class="block__header header--internal">
+<section class="block block--download">
+    <header class="block__header header--internal">
         <h2 class="header__title">Baixe o Spotify</h2>
         <p class="header__subtitle">Escute milhões de músicas e podcasts no seu dispositivo.</p>
-        <!-- TODO #4: Mídias audio visuais acessíveis -->
         <svg class="header__icon" width="302" height="109" viewBox="37 71 302 109" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <defs>
+          <title>Conectividade com o spotify</title>
+          <desc>Vetor contendo todos os dispositivos móveis na qual o spotify possui conectividade (celular, tablet, TV, notebook, caixa de som)</desc>
+          <defs>
               <rect id="a" x="5.501" y="34.954" width="81.513" height="53.929" rx="3.11"/>
               <rect id="b" x=".015" y=".079" width="23.004" height="33.456" rx="2.074"/>
               <mask id="c" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="81.513" height="53.929" fill="#fff">
@@ -38,12 +37,11 @@
               </g>
             </g>
           </svg>
-    </div>
+    </header>
 
     <div class="wrapper column">
         <div class="block__content" id="main-content">
-            <!-- TODO #3: Conteúdo acessível -->
-            <h2>Spotify para Linux</h2>
+            <h2>Spotify para <abbr title="Sistema operacional baseado em Unix"></abbr></h2>
 
             <p>
                 Aqui você pode encontrar diferentes maneiras de instalar o Spotify para Linux. 
@@ -55,12 +53,10 @@
 
             <h3>Instalação no Ubuntu</h3>
             <p>
-                <!-- TODO #3: Conteúdo acessível -->
-                Vá para Spotify no Ubuntu Software e clique em instalar. Se o link não funcionar, abra o Ubuntu Software e procure por Spotify.
+                Vá para Spotify no <span lang="en">Ubuntu Software</span> e clique em instalar. Se o link não funcionar, abra o Ubuntu Software e procure por Spotify.
             </p>
 
-            <!-- TODO #3: Conteúdo acessível -->
-            <h3>Install via command line</h3>
+            <h3>Install via CLI (Interface de linha de comando)</h3>
 
             <h4>Debian / Ubuntu</h4>
 
@@ -79,4 +75,4 @@
             <code>sudo apt-get update && sudo apt-get install spotify-client</code>
         </div>
     </div>
-</div>
+</section>

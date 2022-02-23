@@ -9,9 +9,25 @@ import { filter, map } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  constructor() { }
+  constructor(
+    private titleService: Title,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) { }
 
-  ngOnInit(): void {}
-  // TODO #1: Páginas com títulos acessíveis
+  ngOnInit(): void {
+    const appTitle = this.titleService.getTitle();
+    this.router
+      .events.pipe(
+        filter(event => event instanceof NavigationEnd),
+        map(() => {
+          const child = this.activatedRoute.firstChild;
+
+          return child?.snapshot.data['title'] ?? appTitle;
+        })
+      ).subscribe((title: string) => {
+        this.titleService.setTitle(title);
+      });
+  }
   
 }

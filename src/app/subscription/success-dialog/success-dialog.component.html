@@ -1,20 +1,16 @@
-<!-- TODO #2: Código semântico -->
-<div class="block__header">
-  <!-- TODO #4: Mídias audio visuais acessíveis -->
-    <img width="200" src="assets/images/spotify.svg">
-    <!-- TODO #2: Código semântico -->
-    <h1 mat-dialog-title class="header__title">
+<header class="block__header">
+    <img width="200" src="assets/images/spotify.svg" alt="Logo do spotify">
+    <h2 mat-dialog-title class="header__title">
       Obrigada por se juntar a nós,
       <strong>{{ newUser.name }}!</strong>
-    </h1>
-</div>
+    </h2>
+</header>
 
 <div mat-dialog-content>
   <p>Estamos quase lá...</p>
   <p>Enviamos um e-mail para <strong>{{ newUser.email }}</strong></p>
 </div>
 
-<!-- TODO #2: Código semântico -->
-<div mat-dialog-actions>
+<footer mat-dialog-actions>
   <button class="button button--primary" (click)="closeModal()">Já recebi o e-mail!</button>
-</div>
+</footer>

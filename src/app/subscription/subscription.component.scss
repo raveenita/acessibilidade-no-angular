@@ -37,11 +37,21 @@
             border-radius: 4px;
             border: 1px solid var(--color-black);
 
-            // TODO #6: Formulário acessível
+            &.ng-touched {
+                &.ng-invalid {
+                    border-color: var(--color-red);
+                }
+
+                &.ng-invalid,
+                & + .mat-icon {
+                    color: var(--color-red);
+                }
+            }
         }
     
         .form__group { 
             margin-bottom: 1rem;
+            position: relative;
         }
 
         .form__actions {

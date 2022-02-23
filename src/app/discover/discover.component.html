@@ -1,35 +1,30 @@
-<!-- TODO #2: Código semântico -->
-<div class="block block--discover" id="main-content">
+<section class="block block--discover" id="main-content">
     <div class="wrapper column">
-        <!-- TODO #2: Código semântico -->
-        <div class="block__header">
-            <!-- TODO #3: Conteúdo acessível -->
-            <h1 class="header__title">Favorite Music Tracker</h1>
+        <header class="block__header">
+            <h2 class="header__title">Favorite Music Tracker</h2>
             <p class="header__subtitle">Descubra a música que mais aparece em suas playlists.</p>
-        </div>
+        </header>
         <div class="block__form">
             <input class="form__input" class="form__input" [(ngModel)]="accountId"
             type="text" name="search"/>
-            <div class="block__actions">
+
+            <footer class="block__actions">
                 <a href="http://localhost:8888/" class="button button--primary">Logar no Spotify</a>
-                <!-- TODO #3: Conteúdo acessível -->
-                <button  class="button button--secondary" (click)="getFavoriteTracksFromUserPlaylists()">Descobrir</button>
-            </div>
+                <button  class="button button--secondary" (click)="getFavoriteTracksFromUserPlaylists()">Descobrir sua música favorita</button>
+            </footer>
         </div>
     </div>
-</div>
+</section>
 
-<!-- TODO #2: Código semântico -->
-<div class="block block--instructions">
+<section class="block block--instructions">
     <div class="wrapper column">
-        <!-- TODO #2: Código semântico -->
-        <div class="block__header">
-            <h1 class="header__title">Logue com o spotify e clique em <mark>Descobrir</mark>.</h1>
-        </div>
+        <header class="block__header">
+            <h2 class="header__title">Logue com o spotify e clique em <mark>Descobrir</mark>.</h2>
+        </header>
 
         <div *ngIf="classifiedTracks !== undefined">
             <app-search-result [tracks]="classifiedTracks"></app-search-result>
         </div>
     </div>
-</div>
+</section>
 

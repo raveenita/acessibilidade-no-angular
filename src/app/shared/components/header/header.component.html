@@ -1,21 +1,23 @@
+<h1 class="screen-reader--only">Acessibilidade no spotify</h1>
+
 <app-a11y-toolbar></app-a11y-toolbar>
 
-<!-- TODO #2: Código semântico -->
-<div class="header">
+<header class="header">
     <div class="wrapper">
         <a [routerLink]="['/home']">
-            <!-- TODO #4: Mídias audio visuais acessíveis -->
-            <img class="header__logo" alt="" src="assets/images/spotify.svg"/>
+            <img class="header__logo" alt="Logo do Spotify" src="assets/images/spotify.svg"/>
         </a>
         
-        <!-- TODO #2: Código semântico -->
-        <div class="header__nav">
+        <nav class="header__nav">
+            <header class="block__header screen-reader--only">
+                <h2 class="header__title">Menu de navegação</h2>
+            </header>
+
             <a class="nav__link" [routerLink]="['faq']">Perguntas Frequentes</a>
             <a class="nav__link" [routerLink]="['subscription']">Cadastrar</a>
             <a class="nav__link" [routerLink]="['download']">Download</a>
 
-            <!-- TODO #3: Conteúdo acessível -->
-            <a class="nav__link button button--primary" [routerLink]="['discover']">Favorite Music Tracker</a>
-        </div>
+            <a class="nav__link button button--primary" [routerLink]="['discover']">Descubra sua música favorita</a>
+        </nav>
     </div>
-</div>
+</header>

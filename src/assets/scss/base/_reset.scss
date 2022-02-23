@@ -3,8 +3,6 @@
 *:after {
     padding: 0;
     margin: 0;
-    // TODO #3: Conteúdo acessível
-    user-select: none;
     box-sizing: border-box;
 }
 
@@ -15,7 +13,11 @@ button,
 video {
     &:focus,
     &:active {
-        outline: none;
-        // TODO #11: Skip link e navegação por teclado
+        outline: 3px dashed var(--color-green) !important;
     }
+}
+
+img:not([alt]),
+img[alt=""] {
+    background-color: red;
 }

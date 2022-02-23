@@ -19,11 +19,12 @@ export class SuccessDialogComponent implements OnInit {
   
   constructor(
     public dialogRef: MatDialogRef<SuccessDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public newUser: User
+    @Inject(MAT_DIALOG_DATA) public newUser: User,
+    private liveAnnouncer: LiveAnnouncer
   ) {}
 
   ngOnInit(): void {
-    // TODO #7: Anunciar mudanças aos leitores de tela
+    this.liveAnnouncer.announce('Cadastro realizado com sucesso!');
   }
 
   closeModal(): void {

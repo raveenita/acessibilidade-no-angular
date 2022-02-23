@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-disable-animation',
@@ -6,11 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./disable-animation.component.scss']
 })
 export class DisableAnimationComponent {
+  public isAnimationDisabled = false;
 
-  constructor() { }
+  constructor(
+    private renderer: Renderer2
+  ) { }
 
   public toggleAnimationClass() {
-    // TODO #5: Alternativa para o usuário controlar mídias e animações
+    if (this.isAnimationDisabled) {
+      this.renderer.addClass(document.body, 'animate');
+    } else {
+      this.renderer.removeClass(document.body, 'animate');
+    }
   }
 
 }

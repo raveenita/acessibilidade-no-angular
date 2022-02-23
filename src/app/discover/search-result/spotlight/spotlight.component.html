@@ -1,20 +1,16 @@
-<!-- TODO #2: Código semântico -->
-<div class="block song--spotlighted">
-    <!-- TODO #2: Código semântico -->
+<section class="block song--spotlighted">
     <div class="song">
         <div class="song__details">
             <div class="song__cover">
                 <img [src]="spotlightedTrack!.album.images[0].url"/>
             </div>
             <p class="song__repetitions">Aparece em <mark class="most__repetitions">{{ spotlightedTrack!.repetitions }}</mark>playlists</p>
-            <!-- TODO #2: Código semântico -->
-            <h4 class="song__title">{{ spotlightedTrack!.name }}</h4>
+            <h3 class="song__title">{{ spotlightedTrack!.name }}</h3>
             <p class="song__artist">{{ spotlightedTrack!.artists[0].name }}</p>
         </div>
 
-        <!-- TODO #2: Código semântico -->
-        <div class="song__actions">
+        <footer class="song__actions">
             <a target="_blank" [href]="spotlightedTrack!.href" class="button button--primary">Escutar no Spotify</a>
-        </div>
+        </footer>
     </div>
-</div>
+</section>

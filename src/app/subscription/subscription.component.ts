@@ -27,6 +27,7 @@ export class SubscriptionComponent {
   constructor(
     private formBuilder: FormBuilder,
     private dialog: MatDialog,
+    private liveAnnouncer: LiveAnnouncer
   ) { }
 
   public subscriptionForm: FormGroup = this.formBuilder.group({
@@ -44,14 +45,13 @@ export class SubscriptionComponent {
     if(this.subscriptionForm.valid) {
       this.openSuccessDialog();
     } else {
-      alert('Preencha todos os campos!');
-      // TODO #6: Formulário acessível
-      // TODO #7: Anunciar mudanças aos leitores de tela
+      this.subscriptionForm.markAllAsTouched();
+      this.liveAnnouncer.announce('Preencha todos os campos!');
     }
   }
 
   public onSelectionChange() {
-    // TODO #7: Anunciar mudanças aos leitores de tela
+    // TODO #7: Lição de casa // Anunciar mudanças aos leitores de tela
   }
 
   public openSuccessDialog() {
@@ -66,7 +66,7 @@ export class SubscriptionComponent {
     });
 
     dialogRef.afterClosed().subscribe(() => {
-      // TODO #7: Anunciar mudanças aos leitores de tela
+      this.liveAnnouncer.announce('Modal de sucesso fechada!');
     });
   }
  

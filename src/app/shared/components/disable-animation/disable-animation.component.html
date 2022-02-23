@@ -1,4 +1,3 @@
-<!-- TODO #5: Alternativa para o usuário controlar mídias e animações -->
-<mat-slide-toggle>
+<mat-slide-toggle [(ngModel)]="isAnimationDisabled" (toggleChange)="toggleAnimationClass()">
     <p>Desativar <br>animações</p>
 </mat-slide-toggle>
